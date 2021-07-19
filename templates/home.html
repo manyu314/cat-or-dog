@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br>
+<div class='container'>
+	<div class = "p-3 mb-2 bg-dark text-white bg-gradient">
+		<h1>DOG OR CAT</h1>
+		<hr>
+		<br>
+		<p><b> Upload a image:</b></p>
+
+		<form action='/predict' id='upload-form' method="POST" enctype="multipart/form-data">
+			<input type='file' name='file' accept="image/*" multiple><br><br>
+			<input type='submit' value='Submit'>
+		</form>
+
+		<p><b>NOTE: Model Accuracy is 80%</b></p>
+	</div>
+</div>
+
+
+{% endblock %}

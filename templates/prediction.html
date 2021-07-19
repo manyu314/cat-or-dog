@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br>
+<div class='container'>
+	<div class = "p-3 mb-2 bg-dark text-white bg-gradient">
+	{% if filename %}
+	<h2> The Image is of {{ result }}</h2>
+
+	{% endif %}
+
+	{% if filename %}
+	<div>
+		<img src="{{ url_for('static', filename=filename) }}" class="rounded mx-auto d-block">
+	</div>
+	{% endif %}
+	</div>
+</div>
+
+{% endblock %}
